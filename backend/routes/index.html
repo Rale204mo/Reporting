@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Hospital — Book Appointment (Dark Wireframe)</title>
+<style>
+  :root{
+    --bg: #0f1720;
+    --panel: #11141a;
+    --muted: #9aa4ad;
+    --line: rgba(255,255,255,0.06);
+    --accent: rgba(255,255,255,0.06);
+    --card: rgba(255,255,255,0.03);
+    --radius: 12px;
+    --maxw: 420px;
+    --gap: 16px;
+    font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI",
+                 Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+  }
+
+  html,body{height:100%}
+  body{
+    margin:0;
+    background: linear-gradient(180deg,var(--bg), #0b0f13 100%);
+    color:#e6eef3;
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:24px;
+  }
+
+  .frame{
+    width:100%;
+    max-width:var(--maxw);
+    background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+    border:1px solid var(--line);
+    border-radius:16px;
+    padding:28px;
+    box-sizing:border-box;
+    box-shadow: 0 6px 18px rgba(2,6,23,0.6), inset 0 1px 0 rgba(255,255,255,0.01);
+  }
+
+  header{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:12px;
+    margin-bottom:20px;
+  }
+
+  .logo{
+    width:56px;
+    height:56px;
+    border-radius:10px;
+    background:linear-gradient(135deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+    border:1px solid var(--line);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:var(--muted);
+    font-weight:700;
+    letter-spacing:1px;
+    font-size:14px;
+  }
+
+  h1{
+    margin:0;
+    text-align:center;
+    font-size:28px;
+    font-weight:700;
+    color:#dfe9f2;
+    line-height:1.05;
+    margin-bottom:18px;
+  }
+
+  .search{
+    display:block;
+    width:100%;
+    background:var(--card);
+    border:1px solid var(--line);
+    padding:12px 14px;
+    border-radius:12px;
+    box-sizing:border-box;
+    color:var(--muted);
+    display:flex;
+    align-items:center;
+    gap:10px;
+  }
+  .search input{
+    background:transparent;
+    border:0;
+    outline:0;
+    color: #e6eef3;
+    font-size:15px;
+    width:100%;
+  }
+  .search .icon{ font-size:18px; color:var(--muted) }
+
+  .section{
+    margin-top:18px;
+  }
+
+  .label{
+    color:var(--muted);
+    font-size:14px;
+    margin-bottom:10px;
+    display:block;
+  }
+
+  .filters{
+    display:flex;
+    gap:12px;
+    flex-wrap:wrap;
+  }
+
+  .chip{
+    flex:1 1 140px;
+    min-width:120px;
+    background:transparent;
+    border:1px solid var(--line);
+    border-radius:10px;
+    padding:10px 12px;
+    box-sizing:border-box;
+    color:var(--muted);
+    display:flex;
+    align-items:center;
+    gap:8px;
+    justify-content:center;
+    cursor:pointer;
+  }
+  .chip .ic{ font-size:16px; color:var(--muted) }
+
+  .grid{
+    display:grid;
+    grid-template-columns:repeat(2, 1fr);
+    gap:12px;
+    margin-top:10px;
+  }
+
+  .btn{
+    display:block;
+    width:100%;
+    text-align:center;
+    padding:12px;
+    border-radius:10px;
+    border:1px solid var(--line);
+    background:transparent;
+    color:var(--muted);
+    cursor:pointer;
+  }
+
+  footer{
+    display:flex;
+    gap:12px;
+    margin-top:20px;
+  }
+
+  .bottom{
+    flex:1;
+    display:flex;
+    gap:12px;
+  }
+
+  /* focus styles for accessibility */
+  .chip:focus, .btn:focus, .search input:focus{
+    outline: 3px solid rgba(99,102,241,0.12);
+    outline-offset:2px;
+  }
+
+  /* small screens tweak */
+  @media (max-width:360px){
+    h1{font-size:22px}
+    .logo{width:48px;height:48px;font-size:12px}
+    .frame{padding:18px}
+  }
+</style>
+</head>
+<body>
+  <main class="frame" role="main" aria-label="Book a doctor appointment">
+    <header>
+      <div class="logo" aria-hidden="true">LOGO</div>
+    </header>
+
+    <h1>Book a Doctor<br/>Appointment</h1>
+
+    <label class="search" for="search">
+      <span class="icon" aria-hidden="true">🔍</span>
+      <input id="search" type="search" placeholder="Find a doctor or specialty..." aria-label="Search doctors or specialties" />
+    </label>
+
+    <div class="section">
+      <span class="label">Quick Filters:</span>
+      <div class="filters" role="list">
+        <button class="chip" role="button" aria-pressed="false"><span class="ic">🩺</span> Specialty</button>
+        <button class="chip" role="button" aria-pressed="false"><span class="ic">📍</span> Location</button>
+        <button class="chip" role="button" aria-pressed="false"><span class="ic">📅</span> Today</button>
+      </div>
+    </div>
+
+    <div class="section">
+      <span class="label">Popular Specialties:</span>
+      <div class="grid" role="list">
+        <button class="btn" type="button">Cardiology</button>
+        <button class="btn" type="button">Dentistry</button>
+        <button class="btn" type="button">Pediatrics</button>
+        <button class="btn" type="button">Dermatology</button>
+      </div>
+    </div>
+
+    <footer class="section" aria-label="Bottom navigation">
+      <div class="bottom">
+        <button class="btn" type="button">My Appointments</button>
+        <button class="btn" type="button">Notifications</button>
+      </div>
+    </footer>
+  </main>
+</body>
+</html>

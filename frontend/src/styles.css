@@ -1,0 +1,285 @@
+
+body, html, #root {
+  height: 100%;
+}
+body {
+  background: #0b1220; /* dark navy */
+  color: #fff;
+  font-family: Arial, sans-serif;
+}
+.sidebar {
+  width: 240px;
+  background: #0b2440;
+  position: fixed;
+  top:0;
+  bottom:0;
+  padding-top:20px;
+}
+.sidebar a { color: #fff; display:block; padding:12px 20px; text-decoration:none; }
+.sidebar a:hover { background:#12325a; text-decoration:none; }
+.content { margin-left:260px; padding:20px; }
+.card { background:#071028; border:none; color:#fff; }
+.table th, .table td { color:#fff; }
+.header { display:flex; justify-content:space-between; align-items:center; margin-bottom:20px; }
+.btn-toggle { position: fixed; left: 10px; top: 10px; z-index: 1000; }
+
+
+/* Modal Styles for Add Report Form */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1050;
+}
+
+.modal-content {
+  background: white;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 700px;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.modal-header {
+  padding: 1.5rem;
+  border-bottom: 1px solid #dee2e6;
+  background: #f8f9fa;
+  border-radius: 10px 10px 0 0;
+}
+
+.modal-body {
+  padding: 1.5rem;
+}
+
+.modal-footer {
+  padding: 1rem 1.5rem;
+  border-top: 1px solid #dee2e6;
+  background: #f8f9fa;
+  border-radius: 0 0 10px 10px;
+}
+
+.form-label {
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+}
+
+.form-control {
+  border: 2px solid #e9ecef;
+  border-radius: 8px;
+  padding: 0.75rem;
+  transition: all 0.3s ease;
+}
+
+.form-control:focus {
+  border-color: #3498db;
+  box-shadow: 0 0 0 0.2rem rgba(52, 152, 219, 0.25);
+}
+
+
+/* Dashboard Statistics Cards */
+.stat-card {
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+}
+
+.stat-icon {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.stat-info h3 {
+  font-size: 2rem;
+  margin: 0;
+  font-weight: 700;
+}
+
+.stat-info p {
+  margin: 5px 0 0 0;
+  opacity: 0.9;
+}
+
+/* Chart Styles */
+.chart-bar {
+  padding: 10px 0;
+}
+
+.chart-progress {
+  background: #e9ecef;
+  border-radius: 10px;
+  height: 8px;
+  overflow: hidden;
+}
+
+.chart-progress-bar {
+  background: linear-gradient(90deg, #3498db, #2980b9);
+  height: 100%;
+  border-radius: 10px;
+  transition: width 0.5s ease;
+}
+
+.chart-label {
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.chart-value {
+  font-weight: 600;
+  color: #3498db;
+}
+
+.chart-stats {
+  font-size: 0.8rem;
+  color: #6c757d;
+}
+
+/* Recent Reports */
+.recent-report-item {
+  padding: 15px;
+  border-bottom: 1px solid #e9ecef;
+  transition: background-color 0.3s ease;
+}
+
+.recent-report-item:hover {
+  background-color: #f8f9fa;
+}
+
+.recent-report-item:last-child {
+  border-bottom: none;
+}
+
+.topic-preview {
+  font-size: 0.85rem;
+  color: #6c757d;
+  margin-top: 5px;
+}
+
+/* Navigation Pills */
+.nav-pills .nav-link {
+  color: #6c757d;
+  font-weight: 600;
+  padding: 10px 20px;
+  margin-right: 10px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.nav-pills .nav-link.active {
+  background: linear-gradient(135deg, #3498db, #2980b9);
+  color: white;
+}
+
+.nav-pills .nav-link:hover:not(.active) {
+  background-color: #e9ecef;
+  color: #2c3e50;
+}
+
+/* Quick Actions */
+.btn {
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Modal Styles */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1050;
+}
+
+.modal-content {
+  background: white;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 700px;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.modal-header {
+  padding: 1.5rem;
+  border-bottom: 1px solid #dee2e6;
+  background: #f8f9fa;
+  border-radius: 10px 10px 0 0;
+}
+
+.modal-body {
+  padding: 1.5rem;
+}
+
+.modal-footer {
+  padding: 1rem 1.5rem;
+  border-top: 1px solid #dee2e6;
+  background: #f8f9fa;
+  border-radius: 0 0 10px 10px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .stat-card {
+    margin-bottom: 15px;
+  }
+  
+  .chart-container {
+    margin-bottom: 20px;
+  }
+}
+
+/* Excel download button styling */
+.btn-excel {
+  background: linear-gradient(135deg, #217346, #1e6e3e);
+  border-color: #217346;
+  color: white;
+}
+
+.btn-excel:hover {
+  background: linear-gradient(135deg, #1e6e3e, #185c32);
+  border-color: #1e6e3e;
+  color: white;
+}
+
+.btn-excel:disabled {
+  background: #6c757d;
+  border-color: #6c757d;
+  cursor: not-allowed;
+}
+
+.btn-info {
+  background: linear-gradient(135deg, #17a2b8, #138496);
+  border-color: #17a2b8;
+}
+
+.btn-info:hover {
+  background: linear-gradient(135deg, #138496, #117a8b);
+  border-color: #138496;
+}
