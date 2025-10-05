@@ -1,8 +1,8 @@
 import axios from 'axios';
 
 const API = axios.create({
-  baseURL: process.env.REACT_APP_API_URL || 'http://localhost:5000',
-  timeout: 15000, // Increased timeout
+  baseURL: process.env.REACT_APP_API_URL || 'https://luct-reporting-backend.onrender.com',
+  timeout: 10000,
   headers: {
     'Content-Type': 'application/json',
   },
