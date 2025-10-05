@@ -4,7 +4,8 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "migrate": "node migrate.js"
+    "migrate": "node migrate.js",
+    "build": "react-scripts build" 
   },
   "dependencies": {
     "bcryptjs": "^3.0.2",
