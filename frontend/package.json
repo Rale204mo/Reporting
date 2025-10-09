@@ -11,6 +11,7 @@
     "react-scripts": "^5.0.1"
   },
   "scripts": {
+     "render-build": "npm install && npm run build",
     "start": "react-scripts start",
      "build": "CI=false react-scripts build"
   },
