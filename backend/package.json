@@ -1,25 +1,35 @@
 {
-  "name": "wings-backend",
+  "name": "luct",
   "version": "1.0.0",
   "main": "server.js",
+  "type": "commonjs",
   "scripts": {
     "start": "node server.js",
-    "migrate": "node migrate.js",
-    "build": "react-scripts build" 
+    "dev": "nodemon server.js",
+    "migrate": "node migrate.js"
   },
   "dependencies": {
     "bcryptjs": "^3.0.2",
-    "body-parser": "^2.2.0",
+    "body-parser": "^1.20.3",
     "cors": "^2.8.5",
     "dotenv": "^16.6.1",
     "express": "^4.21.2",
-    "jsonwebtoken": "^9.0.0",
-    "mysql2": "^3.15.1",
-    "pg": "^8.11.0"
+    "jsonwebtoken": "^9.0.2",
+    "pg": "^8.11.5"
   },
-  "description": "",
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "commonjs"
+  "devDependencies": {
+    "nodemon": "^3.1.7"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "description": "Backend API for the Wings project with authentication, reports, feedback, and user management.",
+  "keywords": [
+    "express",
+    "postgresql",
+    "jwt",
+    "api",
+    "nodejs",
+    "feedback-system"
+  ]
 }

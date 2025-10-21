@@ -85,34 +85,6 @@ body {
 }
 
 
-/* Dashboard Statistics Cards */
-.stat-card {
-  border-radius: 10px;
-  padding: 20px;
-  text-align: center;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
-}
-
-.stat-card:hover {
-  transform: translateY(-5px);
-}
-
-.stat-icon {
-  font-size: 2.5rem;
-  margin-bottom: 10px;
-}
-
-.stat-info h3 {
-  font-size: 2rem;
-  margin: 0;
-  font-weight: 700;
-}
-
-.stat-info p {
-  margin: 5px 0 0 0;
-  opacity: 0.9;
-}
 
 /* Chart Styles */
 .chart-bar {
@@ -127,7 +99,7 @@ body {
 }
 
 .chart-progress-bar {
-  background: linear-gradient(90deg, #3498db, #2980b9);
+  background: linear-gradient(90deg, #040d13, #010405);
   height: 100%;
   border-radius: 10px;
   transition: width 0.5s ease;
@@ -282,4 +254,47 @@ body {
 .btn-info:hover {
   background: linear-gradient(135deg, #138496, #117a8b);
   border-color: #138496;
+}
+
+
+/* Theme Variables */
+:root {
+  --primary-color: #007bff;
+  --bg-color: #ffffff;
+  --text-color: #333333;
+  --card-bg: #ffffff;
+  --border-color: #dee2e6;
+}
+
+[data-theme="dark"] {
+  --primary-color: #0d6efd;
+  --bg-color: #1a1a1a;
+  --text-color: #ffffff;
+  --card-bg: #2d2d2d;
+  --border-color: #444444;
+}
+
+[data-theme="blue"] {
+  --primary-color: #0d0d0e;
+  --bg-color: #e3f2fd;
+  --text-color: #003366;
+  --card-bg: #ffffff;
+  --border-color: #bbdefb;
+}
+
+/* Apply theme variables */
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: all 0.3s ease;
+}
+
+.card {
+  background-color: var(--card-bg);
+  border-color: var(--border-color);
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
 }

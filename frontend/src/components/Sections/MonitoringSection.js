@@ -1,5 +1,5 @@
 ﻿import React from 'react';
-
+import './Monitoring.css';
 const MonitoringSection = ({ reports }) => {
   const stats = {
     totalReports: reports.length,

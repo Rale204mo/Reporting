@@ -1,6 +1,8 @@
 import React, {useEffect, useState} from 'react';
 import API from '../api';
 import { useNavigate } from 'react-router-dom';
+import './Dashboard.css'
+
 
 // Import Components
 import Sidebar from './Sidebars';
@@ -12,6 +14,7 @@ import RatingSection from './Sections/RatingSection';
 import CoursesSection from './Sections/CoursesSection';
 import LecturersSection from './Sections/LecturersSection';
 import SettingsSection from './Sections/SettingsSection';
+import FeedbackComponent from './Sections/FeedbackComponent';
 
 export default function Dashboard(){
   const [reports, setReports] = useState([]);

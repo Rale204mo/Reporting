@@ -1,0 +1,190 @@
+/* Lecturers Card */
+.lecturers-card {
+    background: #071028;
+    border: 1px solid #1e3a5f;
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .lecturers-card-header {
+    background: #0b1220;
+    padding: 15px 20px;
+    border-bottom: 1px solid #1e3a5f;
+    border-radius: 10px 10px 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .lecturers-card-header h5 {
+    margin: 0;
+    color: white;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .lecturers-card-body {
+    padding: 20px;
+  }
+  
+  /* Add Lecturer Button */
+  .add-lecturer-btn {
+    background: #27ae60;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.9rem;
+  }
+  
+  .add-lecturer-btn:hover {
+    background: #229954;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(39, 174, 96, 0.3);
+  }
+  
+  /* Table Styles */
+  .lecturers-table {
+    width: 100%;
+    background: #0b1220;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid #1e3a5f;
+  }
+  
+  .lecturers-table thead {
+    background: #1e3a5f;
+  }
+  
+  .lecturers-table th {
+    color: white;
+    font-weight: 600;
+    padding: 15px 12px;
+    border-bottom: 2px solid #2d4a7a;
+  }
+  
+  .lecturers-table td {
+    color: #e2e8f0;
+    padding: 12px;
+    border-bottom: 1px solid #1e3a5f;
+  }
+  
+  .lecturers-table tbody tr:hover {
+    background: rgba(52, 152, 219, 0.05);
+  }
+  
+  /* Status Badges */
+  .status-badge {
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+  
+  .bg-success {
+    background: #27ae60;
+    color: white;
+  }
+  
+  .bg-warning {
+    background: #f39c12;
+    color: white;
+  }
+  
+  /* Action Buttons */
+  .action-buttons {
+    display: flex;
+    gap: 8px;
+  }
+  
+  .action-btn {
+    padding: 6px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .action-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .btn-warning {
+    background: #f39c12;
+    color: white;
+  }
+  
+  .btn-warning:hover {
+    background: #e67e22;
+  }
+  
+  .btn-info {
+    background: #3498db;
+    color: white;
+  }
+  
+  .btn-info:hover {
+    background: #2980b9;
+  }
+  
+  .btn-danger {
+    background: #e74c3c;
+    color: white;
+  }
+  
+  .btn-danger:hover {
+    background: #c0392b;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .lecturers-card-header {
+      flex-direction: column;
+      gap: 12px;
+      align-items: flex-start;
+    }
+    
+    .add-lecturer-btn {
+      width: 100%;
+      justify-content: center;
+    }
+    
+    .lecturers-table {
+      font-size: 0.9rem;
+    }
+    
+    .action-buttons {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    
+    .action-btn {
+      padding: 8px 12px;
+    }
+  }
+  
+  /* Empty State */
+  .lecturers-empty {
+    text-align: center;
+    padding: 40px 20px;
+    color: #94a3b8;
+  }
+  
+  .lecturers-empty i {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    opacity: 0.5;
+  }

@@ -1,4 +1,6 @@
 ﻿import React from 'react';
+import './LectureSidebar.css';
+
 
 const LecturerSidebar = ({ activeSection, setActiveSection }) => {
   const menuItems = [

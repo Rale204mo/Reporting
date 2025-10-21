@@ -1,6 +1,6 @@
 ﻿import React, { useState } from 'react';
 import API from '../../api'; // Fixed import path
-
+import './Profile.css';
 const ProfileSection = ({ user }) => {
   const [showEditModal, setShowEditModal] = useState(false);
   const [showPasswordModal, setShowPasswordModal] = useState(false);

@@ -1,0 +1,110 @@
+/* Principal Lecturer Specific Styles */
+.principal-badge {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+  }
+  
+  .sidebar-footer {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin-top: auto;
+  }
+  
+  .bg-purple {
+    background: linear-gradient(135deg, #8B5CF6, #7C3AED) !important;
+  }
+  
+  .bg-pink {
+    background: linear-gradient(135deg, #EC4899, #DB2777) !important;
+  }
+  
+  /* Activity Items */
+  .recent-activity-item {
+    padding: 12px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .recent-activity-item:hover {
+    background: rgba(255, 255, 255, 0.05);
+  }
+  
+  .activity-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+  }
+  
+  .activity-icon.high {
+    background: linear-gradient(135deg, #EF4444, #DC2626);
+  }
+  
+  .activity-icon.medium {
+    background: linear-gradient(135deg, #F59E0B, #D97706);
+  }
+  
+  .activity-icon.low {
+    background: linear-gradient(135deg, #10B981, #059669);
+  }
+  
+  /* Dashboard Header */
+  .dashboard-header {
+    background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  /* Quick Actions Grid Enhancement */
+  .quick-actions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 15px;
+  }
+
+
+  .sidebar {
+    width: 240px;
+    min-height: 100vh;
+    background-color: #1e1e2f;
+    transition: all 0.3s ease;
+  }
+  
+  .sidebar-header {
+    background-color: #25253a;
+  }
+  
+  .sidebar-link {
+    color: #bbb;
+    text-decoration: none;
+    font-weight: 500;
+    border-left: 3px solid transparent;
+    transition: background 0.3s, border-left 0.3s;
+  }
+  
+  .sidebar-link:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-left: 3px solid #007bff;
+    color: #fff;
+  }
+  
+  .sidebar-link.active {
+    background-color: #007bff;
+    border-left: 3px solid #00d1ff;
+    color: #fff !important;
+  }
+  
+  .sidebar-footer {
+    background-color: #25253a;
+    font-size: 0.85rem;
+  }
+  

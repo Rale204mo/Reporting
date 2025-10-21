@@ -1,0 +1,243 @@
+/* Principal Lecturer Sidebar */
+.principal-sidebar {
+    width: 300px;
+    background: linear-gradient(180deg, #0f172a 0%, #1e293b 100%);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    padding-top: 20px;
+    box-shadow: 4px 0 25px rgba(0, 0, 0, 0.4);
+    z-index: 1000;
+    border-right: 1px solid rgba(245, 158, 11, 0.3);
+  }
+  
+  /* Sidebar Header */
+  .principal-sidebar-header {
+    padding: 25px 20px;
+    border-bottom: 2px solid rgba(245, 158, 11, 0.4);
+    margin-bottom: 15px;
+    text-align: center;
+    background: rgba(15, 23, 42, 0.8);
+  }
+  
+  .principal-sidebar-header h5 {
+    color: #f8fafc;
+    font-weight: 800;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    margin: 0;
+    background: linear-gradient(135deg, #f59e0b, #d97706);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  /* Sidebar Navigation */
+  .principal-sidebar-nav {
+    padding: 0 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  /* Sidebar Links */
+  .principal-sidebar-link {
+    color: #e2e8f0;
+    display: flex;
+    align-items: center;
+    padding: 14px 18px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border-radius: 10px;
+    border-left: 4px solid transparent;
+    font-weight: 500;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .principal-sidebar-link:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(245, 158, 11, 0.1), transparent);
+    transition: left 0.5s ease;
+  }
+  
+  .principal-sidebar-link:hover {
+    background: linear-gradient(90deg, rgba(245, 158, 11, 0.15) 0%, transparent 100%);
+    color: #f59e0b;
+    border-left-color: #f59e0b;
+    transform: translateX(8px);
+  }
+  
+  .principal-sidebar-link:hover:before {
+    left: 100%;
+  }
+  
+  .principal-sidebar-link.active {
+    background: linear-gradient(90deg, rgba(245, 158, 11, 0.25) 0%, transparent 100%);
+    color: #f59e0b;
+    border-left-color: #f59e0b;
+    font-weight: 600;
+    box-shadow: 0 4px 15px rgba(245, 158, 11, 0.2);
+  }
+  
+  /* Sidebar Icons */
+  .principal-sidebar-link i {
+    width: 22px;
+    text-align: center;
+    font-size: 1.2rem;
+    margin-right: 15px;
+    transition: transform 0.3s ease;
+  }
+  
+  .principal-sidebar-link:hover i {
+    transform: scale(1.1);
+  }
+  
+  .principal-sidebar-link.active i {
+    transform: scale(1.1);
+    color: #f59e0b;
+  }
+  
+  /* Animation for sidebar items */
+  @keyframes principalSlideIn {
+    from {
+      opacity: 0;
+      transform: translateX(-30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  .principal-sidebar-link {
+    animation: principalSlideIn 0.4s ease-out;
+  }
+  
+  /* Stagger animations for each menu item */
+  .principal-sidebar-link:nth-child(1) { animation-delay: 0.1s; }
+  .principal-sidebar-link:nth-child(2) { animation-delay: 0.15s; }
+  .principal-sidebar-link:nth-child(3) { animation-delay: 0.2s; }
+  .principal-sidebar-link:nth-child(4) { animation-delay: 0.25s; }
+  .principal-sidebar-link:nth-child(5) { animation-delay: 0.3s; }
+  .principal-sidebar-link:nth-child(6) { animation-delay: 0.35s; }
+  .principal-sidebar-link:nth-child(7) { animation-delay: 0.4s; }
+  .principal-sidebar-link:nth-child(8) { animation-delay: 0.45s; }
+  
+  /* Badge for important items (optional) */
+  .sidebar-badge {
+    background: linear-gradient(135deg, #f59e0b, #d97706);
+    color: white;
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    margin-left: auto;
+    animation: pulse 2s infinite;
+  }
+  
+  @keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.7; }
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .principal-sidebar {
+      width: 270px;
+      transform: translateX(-100%);
+      transition: transform 0.3s ease;
+    }
+    
+    .principal-sidebar.open {
+      transform: translateX(0);
+    }
+    
+    .principal-sidebar-header {
+      padding: 20px 15px;
+    }
+    
+    .principal-sidebar-header h5 {
+      font-size: 1rem;
+    }
+    
+    .principal-sidebar-link {
+      padding: 12px 15px;
+      font-size: 0.9rem;
+    }
+    
+    .principal-sidebar-link i {
+      font-size: 1.1rem;
+      margin-right: 12px;
+    }
+  }
+  
+  /* Mobile Toggle Button */
+  .principal-sidebar-toggle {
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    z-index: 1001;
+    background: linear-gradient(135deg, #f59e0b, #d97706);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    width: 45px;
+    height: 45px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 1.3rem;
+    box-shadow: 0 4px 15px rgba(245, 158, 11, 0.3);
+    transition: all 0.3s ease;
+  }
+  
+  .principal-sidebar-toggle:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(245, 158, 11, 0.4);
+  }
+  
+  @media (max-width: 768px) {
+    .principal-sidebar-toggle {
+      display: flex;
+    }
+  }
+  
+  /* Main Content Adjustment */
+  .principal-main-content {
+    margin-left: 300px;
+    transition: margin-left 0.3s ease;
+  }
+  
+  @media (max-width: 768px) {
+    .principal-main-content {
+      margin-left: 0;
+    }
+    
+    .principal-main-content.sidebar-open {
+      margin-left: 270px;
+    }
+  }
+  
+  /* Enhanced version with role badge */
+  .principal-role-badge {
+    background: linear-gradient(135deg, #f59e0b, #d97706);
+    color: white;
+    padding: 4px 12px;
+    border-radius: 15px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-top: 8px;
+    display: inline-block;
+    box-shadow: 0 2px 10px rgba(245, 158, 11, 0.3);
+  }

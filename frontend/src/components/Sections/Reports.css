@@ -1,0 +1,385 @@
+/* Reports Card */
+.reports-card {
+    background: #071028;
+    border: 1px solid #1e3a5f;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  
+  /* Reports Header */
+  .reports-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .reports-header h5 {
+    margin: 0;
+    color: white;
+    font-weight: 600;
+    font-size: 1.2rem;
+  }
+  
+  /* Action Buttons */
+  .reports-actions {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .reports-btn {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.9rem;
+  }
+  
+  .reports-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  .reports-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+  }
+  
+  .btn-success {
+    background: #27ae60;
+    color: white;
+  }
+  
+  .btn-success:hover {
+    background: #229954;
+  }
+  
+  .btn-excel {
+    background: #217346;
+    color: white;
+  }
+  
+  .btn-excel:hover {
+    background: #1e6e3e;
+  }
+  
+  .btn-primary {
+    background: #3498db;
+    color: white;
+  }
+  
+  .btn-primary:hover {
+    background: #2980b9;
+  }
+  
+  /* Table Styles */
+  .reports-table-container {
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid #1e3a5f;
+  }
+  
+  .reports-table {
+    width: 100%;
+    background: #0b1220;
+    margin: 0;
+  }
+  
+  .reports-table thead {
+    background: #1e3a5f;
+  }
+  
+  .reports-table th {
+    color: white;
+    font-weight: 600;
+    padding: 15px 12px;
+    border-bottom: 2px solid #2d4a7a;
+    font-size: 0.9rem;
+  }
+  
+  .reports-table td {
+    color: #e2e8f0;
+    padding: 12px;
+    border-bottom: 1px solid #1e3a5f;
+    font-size: 0.9rem;
+  }
+  
+  .reports-table tbody tr:hover {
+    background: rgba(52, 152, 219, 0.05);
+  }
+  
+  /* Table Striped Effect */
+  .reports-table tbody tr:nth-child(even) {
+    background: rgba(255, 255, 255, 0.02);
+  }
+  
+  /* Attendance Badge */
+  .attendance-badge {
+    background: #17a2b8;
+    color: white;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+  }
+  
+  /* Action Buttons Group */
+  .action-buttons {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+  }
+  
+  .action-btn {
+    padding: 6px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+  }
+  
+  .action-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .btn-warning {
+    background: #f39c12;
+    color: white;
+  }
+  
+  .btn-warning:hover {
+    background: #e67e22;
+  }
+  
+  .btn-danger {
+    background: #e74c3c;
+    color: white;
+  }
+  
+  .btn-danger:hover {
+    background: #c0392b;
+  }
+  
+  .btn-info {
+    background: #3498db;
+    color: white;
+  }
+  
+  .btn-info:hover {
+    background: #2980b9;
+  }
+  
+  /* Loading and Empty States */
+  .loading-state {
+    text-align: center;
+    padding: 40px 20px;
+    color: #94a3b8;
+  }
+  
+  .loading-state .spinner {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #3498db;
+    border-top: 2px solid transparent;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    display: inline-block;
+    margin-right: 10px;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  .empty-state {
+    text-align: center;
+    padding: 40px 20px;
+    color: #94a3b8;
+  }
+  
+  .empty-state div {
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+  }
+  
+  .empty-state small {
+    font-size: 0.9rem;
+    opacity: 0.8;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .reports-card {
+      padding: 15px;
+    }
+    
+    .reports-header {
+      flex-direction: column;
+      gap: 15px;
+      align-items: flex-start;
+    }
+    
+    .reports-actions {
+      width: 100%;
+      justify-content: space-between;
+    }
+    
+    .reports-btn {
+      flex: 1;
+      justify-content: center;
+      min-width: 120px;
+    }
+    
+    .reports-table-container {
+      overflow-x: auto;
+    }
+    
+    .reports-table {
+      min-width: 800px;
+    }
+    
+    .action-buttons {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    
+    .action-btn {
+      padding: 8px 12px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .reports-actions {
+      flex-direction: column;
+    }
+    
+    .reports-btn {
+      width: 100%;
+    }
+  }
+
+  /* Add to Reports.css */
+.badge.bg-success {
+  cursor: pointer;
+}
+
+.modal-content {
+  background-color: #2d3748;
+  color: white;
+}
+
+.modal-header {
+  border-bottom: 1px solid #4a5568;
+}
+
+.modal-footer {
+  border-top: 1px solid #4a5568;
+}
+
+.form-control {
+  background-color: #4a5568;
+  border: 1px solid #718096;
+  color: white;
+}
+
+.form-control:focus {
+  background-color: #4a5568;
+  border-color: #63b3ed;
+  color: white;
+}
+
+.btn-group .btn {
+  margin-bottom: 2px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .btn-group {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .btn-group .btn {
+    margin-bottom: 2px;
+    margin-right: 0 !important;
+  }
+}
+
+
+
+
+
+/* Reports.css */
+.badge.bg-success {
+  cursor: pointer;
+}
+
+.modal-content {
+  background-color: #2d3748;
+  color: white;
+}
+
+.modal-header {
+  border-bottom: 1px solid #4a5568;
+}
+
+.modal-footer {
+  border-top: 1px solid #4a5568;
+}
+
+.form-control {
+  background-color: #4a5568;
+  border: 1px solid #718096;
+  color: white;
+}
+
+.form-control:focus {
+  background-color: #4a5568;
+  border-color: #63b3ed;
+  color: white;
+}
+
+.btn-group .btn {
+  margin-bottom: 2px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .btn-group {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .btn-group .btn {
+    margin-bottom: 2px;
+    margin-right: 0 !important;
+  }
+}
+
+/* Excel export button styling */
+.btn-excel {
+  background-color: #217346;
+  color: white;
+  border: none;
+}
+
+.btn-excel:hover {
+  background-color: #1a5c38;
+  color: white;
+}

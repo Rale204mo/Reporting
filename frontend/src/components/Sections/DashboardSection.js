@@ -1,4 +1,5 @@
 ﻿import React from 'react';
+import '../Dashboard.css';
 
 const DashboardSection = ({ 
   reports, 
@@ -23,7 +24,7 @@ const DashboardSection = ({
     <div>
       <div className="row mb-4">
         <div className="col-md-3">
-          <div className="stat-card bg-primary text-white">
+          <div className="stat-card bg-danger text-white">
             <div className="stat-icon">
               <i className="fas fa-file-alt"></i>
             </div>
@@ -34,7 +35,7 @@ const DashboardSection = ({
           </div>
         </div>
         <div className="col-md-3">
-          <div className="stat-card bg-success text-white">
+          <div className="stat-card bg-pink text-white">
             <div className="stat-icon">
               <i className="fas fa-users"></i>
             </div>
@@ -75,7 +76,7 @@ const DashboardSection = ({
         <div className="card-body">
           <div className="row">
             {canCreateReport && (
-              <div className="col-md-3">
+              <div className="col-md-4">
                 <button 
                   className="btn btn-success w-100 mb-2"
                   onClick={() => setShowAddForm(true)}
@@ -84,7 +85,7 @@ const DashboardSection = ({
                 </button>
               </div>
             )}
-            <div className="col-md-3">
+            <div className="col-md-4">
               <button 
                 className="btn btn-primary w-100 mb-2"
                 onClick={fetchReports}
@@ -92,17 +93,10 @@ const DashboardSection = ({
                 <i className="fas fa-sync me-2"></i>Refresh Data
               </button>
             </div>
-            <div className="col-md-3">
-              <button 
-                className="btn btn-info w-100 mb-2"
-                onClick={() => window.setActiveSection && window.setActiveSection('reports')}
-              >
-                <i className="fas fa-list me-2"></i>
-                {user?.role === 'student' ? 'View Reports' : 'View All Reports'}
-              </button>
-            </div>
+            
+            
             {canViewAllReports && (
-              <div className="col-md-3">
+              <div className="col-md-4">
                 <button 
                   className="btn btn-excel w-100 mb-2"
                   onClick={downloadExcel}

@@ -1,10 +1,10 @@
 ﻿import React, { useState } from 'react';
-
+import './Courses.css';
 const CoursesSection = () => {
   const [courses, setCourses] = useState([
     { id: 1, code: 'DIT', name: 'Diploma in IT', lecturer: 'Ishiepo', students: 45 },
-    { id: 2, code: 'CS101', name: 'Computer Science 101', lecturer: 'Dr. Smith', students: 30 },
-    { id: 3, code: 'IT901', name: 'Information Technology', lecturer: 'Rey', students: 25 }
+    { id: 2, code: 'CS101', name: 'Computer Science 101', lecturer: 'Tumiso', students: 30 },
+    { id: 3, code: 'IT901', name: 'Information Technology', lecturer: 'Nathi', students: 25 }
   ]);
 
   return (

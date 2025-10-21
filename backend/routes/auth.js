@@ -40,4 +40,16 @@ router.get('/test', (req, res) => {
   res.send('Auth route is working');
 });
 
+
+// Route protection component
+const ProtectedRoute = ({ role, requiredRole, children }) => {
+  const normalizedRequired = requiredRole === 'principal_lecturer' ? 'principallecturer' : requiredRole;
+  const normalizedUserRole = role === 'principal_lecturer' ? 'principallecturer' : role;
+  
+  if (normalizedUserRole !== normalizedRequired) {
+    return <Navigate to="/unauthorized" />;
+  }
+  
+  return children;
+};
 module.exports = router;

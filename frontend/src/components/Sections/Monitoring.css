@@ -1,0 +1,181 @@
+/* Monitoring Dashboard */
+.monitoring-dashboard {
+    margin-bottom: 20px;
+  }
+  
+  .monitoring-card {
+    background: #071028;
+    border: 1px solid #1e3a5f;
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .monitoring-card-header {
+    background: #0b1220;
+    padding: 15px 20px;
+    border-bottom: 1px solid #1e3a5f;
+    border-radius: 10px 10px 0 0;
+  }
+  
+  .monitoring-card-header h5 {
+    margin: 0;
+    color: white;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .monitoring-card-body {
+    padding: 20px;
+  }
+  
+  /* Stats Grid */
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+  }
+  
+  /* Stat Cards */
+  .stat-card {
+    background: #0b1220;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    color: white;
+    border: 1px solid #1e3a5f;
+    transition: all 0.3s ease;
+  }
+  
+  .stat-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    border-color: #3498db;
+  }
+  
+  .stat-icon {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    opacity: 0.8;
+  }
+  
+  .stat-info h3 {
+    font-size: 2rem;
+    margin: 0;
+    font-weight: 700;
+  }
+  
+  .stat-info p {
+    margin: 5px 0 0 0;
+    color: #94a3b8;
+    font-size: 0.9rem;
+  }
+  
+  /* Stat Card Colors */
+  .stat-card.bg-primary { background: #3498db; border-color: #2980b9; }
+  .stat-card.bg-success { background: #27ae60; border-color: #229954; }
+  .stat-card.bg-info { background: #17a2b8; border-color: #138496; }
+  .stat-card.bg-warning { background: #f39c12; border-color: #e67e22; }
+  
+  /* Activity List */
+  .activity-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .activity-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    padding: 15px;
+    background: #0b1220;
+    border-radius: 8px;
+    border: 1px solid #1e3a5f;
+    transition: all 0.3s ease;
+  }
+  
+  .activity-item:hover {
+    background: #0f172a;
+    border-color: #3498db;
+    transform: translateX(5px);
+  }
+  
+  .activity-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(39, 174, 96, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  
+  .activity-icon i {
+    color: #27ae60;
+    font-size: 1.1rem;
+  }
+  
+  .activity-content {
+    flex: 1;
+  }
+  
+  .activity-content strong {
+    color: white;
+  }
+  
+  .activity-time {
+    color: #94a3b8;
+    font-size: 0.85rem;
+    margin-top: 5px;
+  }
+  
+  /* Empty State */
+  .activity-empty {
+    text-align: center;
+    padding: 40px 20px;
+    color: #94a3b8;
+  }
+  
+  .activity-empty i {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    opacity: 0.5;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .stats-grid {
+      grid-template-columns: 1fr;
+      gap: 15px;
+    }
+    
+    .stat-card {
+      padding: 15px;
+    }
+    
+    .stat-icon {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+    
+    .stat-info h3 {
+      font-size: 1.5rem;
+    }
+    
+    .activity-item {
+      padding: 12px;
+      gap: 12px;
+    }
+    
+    .activity-icon {
+      width: 35px;
+      height: 35px;
+    }
+    
+    .monitoring-card-body {
+      padding: 15px;
+    }
+  }
